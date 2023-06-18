@@ -23,6 +23,7 @@ public class Order {
     private double totalPrice;
     private double shippingFee;
     private String orderStatus;
+    private Integer status;
     private String notes;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")

@@ -1,9 +1,6 @@
 package com.ecommerce.library.service.impl;
 
-import com.ecommerce.library.model.CartItem;
-import com.ecommerce.library.model.Order;
-import com.ecommerce.library.model.OrderDetail;
-import com.ecommerce.library.model.ShoppingCart;
+import com.ecommerce.library.model.*;
 import com.ecommerce.library.repository.CartItemRepository;
 import com.ecommerce.library.repository.OrderDetailRepository;
 import com.ecommerce.library.repository.OrderRepository;
@@ -67,6 +64,14 @@ public class OrderServiceImpl implements OrderService {
     public void cancelOder(Long id) {
         orderRepository.deleteById(id);
 
+    }
+    @Override
+    public List<Order> findAll() {
+        return orderRepository.findAll();
+    }
+
+    public List<Order> getOrderHistoryForUser(String email) {
+        return orderRepository.findByEmail(email);
     }
 
 }
