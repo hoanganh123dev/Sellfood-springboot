@@ -13,4 +13,6 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, Long> , CrudRepository<Order, Long> {
     @Query("SELECT o FROM Order o join o.customer u WHERE u.username = :email")
     List<Order> findByEmail(@Param("email") String email);
+
+    List<Order> findAllByStatus(int i);
 }

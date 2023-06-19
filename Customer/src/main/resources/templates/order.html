@@ -43,7 +43,7 @@
                                 <th class="price-pr">Tình trạng đặt hàng</th>
                                 <th class="quantity-box">Tổng giá</th>
                                 <th class="total-pr">Phương thức thanh toán</th>
-                                <th>Action</th>
+                                <th>Hành động</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -62,7 +62,7 @@
                                     <p th:text="${orders.orderStatus}"></p>
                                 </td>
                                 <td class="total-pr">
-                                    <p style="color: red" th:text="${'$' + orders.totalPrice}">$ 80.0</p>
+                                    <p style="color: red" th:text="${ orders.totalPrice +'vnd'}">$ 80.0</p>
                                 </td>
                                 <td class="total-pr" style="color: black">
                                     <span></span>Tiền mặt</span>
